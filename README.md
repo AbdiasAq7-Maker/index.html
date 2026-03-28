@@ -16,7 +16,13 @@
 
 <style>
 body {
-  background: linear-gradient(135deg, #1a0006, #3b0012, #000);
+  background: linear-gradient(135deg, #0b0003, #1a0008, #000000);
+}
+
+/* sombra glow vino */
+.glow {
+  text-shadow: 0 0 10px rgba(140, 0, 40, 0.8),
+               0 0 20px rgba(140, 0, 40, 0.6);
 }
 </style>
 
@@ -24,27 +30,34 @@ body {
 
 <body class="text-white font-sans">
 
-<!-- NAV -->
-<nav class="fixed w-full bg-black/60 backdrop-blur-md p-4 flex justify-center gap-8 z-50">
-  <a href="#inicio" class="hover:text-red-300">Inicio</a>
-  <a href="#proyectos" class="hover:text-red-300">Proyectos</a>
-  <a href="#habilidades" class="hover:text-red-300">Habilidades</a>
-  <a href="#contacto" class="hover:text-red-300">Contacto</a>
+<!-- NAVBAR FIJA -->
+<nav class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md shadow-lg z-50">
+  <div class="max-w-5xl mx-auto flex justify-center gap-10 py-4">
+    <a href="#inicio" class="hover:text-red-400 transition">Inicio</a>
+    <a href="#proyectos" class="hover:text-red-400 transition">Proyectos</a>
+    <a href="#habilidades" class="hover:text-red-400 transition">Habilidades</a>
+    <a href="#contacto" class="hover:text-red-400 transition">Contacto</a>
+  </div>
 </nav>
+
+<!-- ESPACIO PARA NAVBAR -->
+<div class="h-20"></div>
 
 <!-- LANDING -->
 <section id="inicio" class="h-screen flex flex-col justify-center items-center text-center px-6">
 
-  <h1 class="text-5xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-4" data-aos="fade-up">
+  <h1 class="text-5xl md:text-6xl font-bold mb-4 glow"
+      data-aos="fade-up">
     Abdias Aq
   </h1>
 
-  <p class="text-gray-300 mb-6" data-aos="fade-up" data-aos-delay="200">
+  <p class="text-gray-400 mb-6" data-aos="fade-up" data-aos-delay="200">
     Estudiante de Ingeniería Estadística e Informática
   </p>
 
-  <a href="#proyectos" data-aos="zoom-in" data-aos-delay="400"
-     class="bg-red-700 hover:bg-red-500 px-6 py-3 rounded-lg transition shadow-lg">
+  <a href="#proyectos"
+     class="bg-red-900 hover:bg-red-700 px-6 py-3 rounded-lg shadow-lg transition"
+     data-aos="zoom-in" data-aos-delay="400">
      Ver Proyectos
   </a>
 
@@ -52,26 +65,28 @@ body {
 
 <!-- SOBRE -->
 <section class="max-w-4xl mx-auto py-20 px-6" data-aos="fade-up">
-  <h2 class="text-3xl text-red-400 mb-4">Sobre mí</h2>
-  <p class="text-gray-300">
-    Soy estudiante de Ingeniería Estadística e Informática, con interés en el análisis de datos,
-    programación y desarrollo web moderno. Me gusta aprender constantemente y construir soluciones innovadoras.
+  <h2 class="text-3xl text-red-500 mb-4">Sobre mí</h2>
+  <p class="text-gray-400">
+    Soy estudiante de Ingeniería Estadística e Informática, con interés en análisis de datos,
+    programación y desarrollo web. Me enfoco en aprender constantemente y desarrollar soluciones modernas.
   </p>
 </section>
 
 <!-- PROYECTOS -->
 <section id="proyectos" class="max-w-4xl mx-auto py-20 px-6">
-  <h2 class="text-3xl text-red-400 mb-6" data-aos="fade-up">Proyectos</h2>
+  <h2 class="text-3xl text-red-500 mb-6" data-aos="fade-up">Proyectos</h2>
 
   <div class="grid md:grid-cols-2 gap-6">
 
-    <div class="bg-black/40 p-6 rounded-lg shadow-lg hover:scale-105 transition" data-aos="fade-right">
-      <h3 class="text-xl text-red-300">Proyecto 1</h3>
+    <div class="bg-black/50 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+         data-aos="fade-right">
+      <h3 class="text-xl text-red-400">Proyecto 1</h3>
       <p class="text-gray-400">Aplicación web en desarrollo.</p>
     </div>
 
-    <div class="bg-black/40 p-6 rounded-lg shadow-lg hover:scale-105 transition" data-aos="fade-left">
-      <h3 class="text-xl text-red-300">Proyecto 2</h3>
+    <div class="bg-black/50 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+         data-aos="fade-left">
+      <h3 class="text-xl text-red-400">Proyecto 2</h3>
       <p class="text-gray-400">Análisis de datos.</p>
     </div>
 
@@ -80,28 +95,28 @@ body {
 
 <!-- HABILIDADES -->
 <section id="habilidades" class="max-w-4xl mx-auto py-20 px-6">
-  <h2 class="text-3xl text-red-400 mb-6" data-aos="fade-up">Habilidades</h2>
+  <h2 class="text-3xl text-red-500 mb-6" data-aos="fade-up">Habilidades</h2>
 
-  <div class="space-y-4">
+  <div class="space-y-5">
 
     <div data-aos="fade-right">
       <p>HTML</p>
       <div class="w-full bg-gray-800 h-3 rounded">
-        <div class="bg-red-500 h-3 rounded w-[90%]"></div>
+        <div class="bg-red-600 h-3 rounded w-[90%] shadow-md"></div>
       </div>
     </div>
 
     <div data-aos="fade-right" data-aos-delay="100">
       <p>CSS</p>
       <div class="w-full bg-gray-800 h-3 rounded">
-        <div class="bg-red-500 h-3 rounded w-[85%]"></div>
+        <div class="bg-red-600 h-3 rounded w-[85%] shadow-md"></div>
       </div>
     </div>
 
     <div data-aos="fade-right" data-aos-delay="200">
       <p>JavaScript</p>
       <div class="w-full bg-gray-800 h-3 rounded">
-        <div class="bg-red-500 h-3 rounded w-[75%]"></div>
+        <div class="bg-red-600 h-3 rounded w-[75%] shadow-md"></div>
       </div>
     </div>
 
@@ -110,9 +125,9 @@ body {
 
 <!-- CONTACTO -->
 <section id="contacto" class="max-w-4xl mx-auto py-20 px-6 text-center">
-  <h2 class="text-3xl text-red-400 mb-4" data-aos="fade-up">Contacto</h2>
+  <h2 class="text-3xl text-red-500 mb-4" data-aos="fade-up">Contacto</h2>
 
-  <p class="text-gray-300 mb-4" data-aos="fade-up">
+  <p class="text-gray-400 mb-4">
     abdias.aquise.12@gmail.com
   </p>
 
@@ -127,11 +142,11 @@ body {
 </section>
 
 <!-- FOOTER -->
-<footer class="text-center py-6 text-gray-500">
+<footer class="text-center py-6 text-gray-600">
   © 2026 - Abdias Aq
 </footer>
 
-<!-- AOS SCRIPT -->
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({
